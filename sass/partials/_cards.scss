@@ -1,0 +1,29 @@
+.card-container {
+    width: 90%;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    height: 264px;
+    width: 264px;
+    background-color: #f4f3ee;
+    margin: 1rem 2rem 1rem 0;
+
+    @include card-border(transparent);
+
+    &--active {
+      background-color: $primary;
+
+      @include card-border(white);
+    }
+
+    &--active-inverted {
+      background-color: white;
+
+      @include card-border($primary);
+    }
+  }
+}

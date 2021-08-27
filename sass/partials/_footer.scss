@@ -1,0 +1,20 @@
+footer {
+  background-color: $light;
+  flex-shrink: 0;
+  margin-top: 250px;
+}
+
+.footer-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $navbar-light-color;
+  height: 44px;
+
+  &__link {
+    color: $navbar-light-color;
+    font-size: 0.75rem;
+  }
+}

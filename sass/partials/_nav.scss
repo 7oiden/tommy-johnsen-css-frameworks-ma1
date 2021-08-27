@@ -1,0 +1,26 @@
+header {
+  background-color: $light;
+}
+
+.nav-container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.nav {
+  padding: 0 !important;
+
+  &__logo {
+    font-size: 4rem;
+    color: black !important;
+  }
+}
+
+navbar-nav {
+    font-size: 2rem;
+}
+
+.nav-item {
+    font-size: 1.125rem;
+}
