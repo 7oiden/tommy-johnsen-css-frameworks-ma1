@@ -1,18 +1,36 @@
 .card-container {
-    width: 90%;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .card-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto auto auto;
+  gap: 2rem;
+  @media (max-width: 1300px) {
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto;
+  }
+  @media (max-width: $large-width) {
+    grid-template-rows: auto auto auto auto auto auto auto auto;
+    grid-template-columns: auto;
+  }
 
   &__item {
-    height: 264px;
+    min-height: 264px;
     width: 264px;
     background-color: #f4f3ee;
-    margin: 1rem 2rem 1rem 0;
 
     @include card-border(transparent);
+
+    @media (max-width: 1300px) {
+      height: 357px;
+      min-width: 357px;
+    }
+    @media (max-width: $large-width) {
+      margin: 0 auto;
+    }
 
     &--active {
       background-color: $primary;

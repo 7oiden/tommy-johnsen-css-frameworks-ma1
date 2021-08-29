@@ -23,7 +23,7 @@ body {
   font-family: "open sans";
 }
 
-main {
+.main-container, .nav-container, .footer-container {
   width: 90%;
   margin: 0 auto;
 }
@@ -40,8 +40,8 @@ a {
 
 h1 {
   text-align: center;
-  font-size: 2.125rem;
-  padding: 2rem 0;
+  padding: 4rem 0;
+  color: #463f3a;
 }
 
 header {
@@ -49,49 +49,92 @@ header {
 }
 
 .nav-container {
-  width: 90%;
-  margin: 0 auto;
   padding: 1rem 0;
 }
 
-.nav {
+.header {
   padding: 0 !important;
 }
 
-.nav__logo {
-  font-size: 4rem;
-  color: black !important;
+.header__logo {
+  font-size: 2.25rem !important;
+  color: #463f3a !important;
 }
 
-navbar-nav {
-  font-size: 2rem;
+.header__hamburger-icon {
+  color: green !important;
 }
 
-.nav-item {
+.navigation-menu {
+  font-size: 10rem;
+}
+
+.navigation-menu__item {
   font-size: 1.125rem;
+  text-transform: uppercase;
+  margin-left: 1rem;
+}
+
+@media (max-width: 768px) {
+  .navigation-menu__item {
+    margin-left: 0;
+  }
 }
 
 .card-container {
-  width: 90%;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .card-grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
+  gap: 2rem;
+}
+
+@media (max-width: 1300px) {
+  .card-grid {
+    -ms-grid-rows: auto auto auto auto;
+        grid-template-rows: auto auto auto auto;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .card-grid {
+    -ms-grid-rows: auto auto auto auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto auto auto;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
 }
 
 .card-grid__item {
-  height: 264px;
+  min-height: 264px;
   width: 264px;
   background-color: #f4f3ee;
-  margin: 1rem 2rem 1rem 0;
   border-radius: 15px;
   border: 3px solid transparent;
   -webkit-box-shadow: 0 6px 12px #00000012;
           box-shadow: 0 6px 12px #00000012;
+}
+
+@media (max-width: 1300px) {
+  .card-grid__item {
+    height: 357px;
+    min-width: 357px;
+  }
+}
+
+@media (max-width: 992px) {
+  .card-grid__item {
+    margin: 0 auto;
+  }
 }
 
 .card-grid__item--active {
@@ -118,8 +161,6 @@ footer {
 }
 
 .footer-container {
-  width: 90%;
-  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -129,8 +170,20 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #8d8d8d;
   height: 44px;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 92px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
 }
 
 .footer-container__link {
@@ -3661,10 +3714,10 @@ textarea.form-control {
 
 .navbar-brand {
   display: inline-block;
-  padding-top: -0.41875rem;
-  padding-bottom: -0.41875rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
   margin-right: 2rem;
-  font-size: 2.225rem;
+  font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
 }
@@ -3715,11 +3768,11 @@ textarea.form-control {
 
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
-  font-size: 1.25rem;
+  font-size: 1.5625rem;
   line-height: 1;
   background-color: transparent;
   border: 1px solid transparent;
-  border-radius: 0.25rem;
+  border-radius: 0;
 }
 
 .navbar-toggler:hover, .navbar-toggler:focus {
@@ -4007,11 +4060,11 @@ textarea.form-control {
 
 .navbar-light .navbar-toggler {
   color: #8d8d8d;
-  border-color: rgba(0, 0, 0, 0.1);
+  border-color: none;
 }
 
 .navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='%238d8d8d' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='%23463f3a' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .navbar-light .navbar-text {

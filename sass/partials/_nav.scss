@@ -3,24 +3,34 @@ header {
 }
 
 .nav-container {
-  width: 90%;
-  margin: 0 auto;
+  @extend .main-container;
+
   padding: 1rem 0;
 }
 
-.nav {
+.header {
   padding: 0 !important;
 
   &__logo {
-    font-size: 4rem;
-    color: black !important;
+    font-size: 2.25rem !important;
+    color: #463f3a !important;
+  }
+
+  &__hamburger-icon {
+    color: green !important;
   }
 }
 
-navbar-nav {
-    font-size: 2rem;
-}
+.navigation-menu {
+  font-size: 10rem;
 
-.nav-item {
+  &__item {
     font-size: 1.125rem;
+    text-transform: uppercase;
+    margin-left: 1rem;
+
+    @media (max-width: $medium-width) {
+      margin-left: 0;
+    }
+  }
 }

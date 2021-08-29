@@ -1,11 +1,20 @@
 $font: "open sans";
-$h1-font-size: 2.125rem;
+
 
 $body-bg: #e5e5e9;
 $primary: #c32c72;
 $light: #f4f3ee;
+$text-color: #463f3a;
+
+$h1-font-size: 2.125rem;
+
 $navbar-light-color: #8d8d8d;
 $navbar-light-active-color: $primary;
+$navbar-toggler-font-size: 25px;
+$navbar-toggler-border-radius: 0;
+$navbar-light-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$text-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+$navbar-light-toggler-border-color: none;
+$navbar-padding-x: 2rem;
 
 @mixin card-border($color) {
   border-radius: 15px;
@@ -13,6 +22,5 @@ $navbar-light-active-color: $primary;
   box-shadow: 0 6px 12px #00000012;
 }
 
-$navbar-padding-x: 2rem;
-
-$navbar-brand-font-size: 2.225rem;
+$large-width: 992px;
+$medium-width: 768px;

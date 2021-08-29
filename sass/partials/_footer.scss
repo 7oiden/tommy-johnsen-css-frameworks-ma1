@@ -5,13 +5,18 @@ footer {
 }
 
 .footer-container {
-  width: 90%;
-  margin: 0 auto;
+  @extend .main-container;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: $navbar-light-color;
   height: 44px;
+
+  @media (max-width: $medium-width) {
+    flex-direction: column;
+    height: 92px;
+    justify-content: space-evenly;
+  }
 
   &__link {
     color: $navbar-light-color;
